@@ -1,0 +1,28 @@
+class Employee:
+    def __init__(self, name, age, salary):
+        self.name = name
+        self.age = age
+        self.salary = salary
+
+    def __repr__(self):
+        return f"{self.name}, {self.age}, {self.salary}"
+
+# Sample list of employees
+employees = [
+    Employee("John", 25, 50000),
+    Employee("Alice", 30, 70000),
+    Employee("Bob", 22, 45000),
+    Employee("David", 30, 80000)
+]
+
+# Sorting by name
+employees_sorted_by_name = sorted(employees, key=lambda emp: emp.name)
+print("Sorted by name:", employees_sorted_by_name)
+
+# Sorting by age
+employees_sorted_by_age = sorted(employees, key=lambda emp: emp.age)
+print("Sorted by age:", employees_sorted_by_age)
+
+# Sorting by salary
+employees_sorted_by_salary = sorted(employees, key=lambda emp: emp.salary)
+print("Sorted by salary:", employees_sorted_by_salary)
