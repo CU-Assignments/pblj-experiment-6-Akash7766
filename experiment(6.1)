@@ -1,0 +1,26 @@
+class Student:
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
+
+    def __repr__(self):
+        return f"{self.name}: {self.marks}%"
+
+# Sample list of students
+students = [
+    Student("Alice", 88),
+    Student("Bob", 72),
+    Student("Charlie", 91),
+    Student("David", 65),
+    Student("Eve", 78)
+]
+
+# Filtering students scoring above 75%
+high_scorers = filter(lambda student: student.marks > 75, students)
+
+# Sorting by marks in descending order
+sorted_students = sorted(high_scorers, key=lambda student: student.marks, reverse=True)
+
+# Displaying student names
+top_students = [student.name for student in sorted_students]
+print("Students scoring above 75%, sorted by marks:", top_students)
